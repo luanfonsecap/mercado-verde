@@ -1,0 +1,14 @@
+{
+	"type": "potgres",
+	"host": "localhost",
+	"port": 5433,
+	"username": "postgres",
+	"password": "docker",
+	"database": "mercado_verde",
+	"entitites": [
+		"./src/models/*.ts"
+	],
+	"cli": {
+		"migrationsDir": "./src/database/migrations"
+	}
+}
