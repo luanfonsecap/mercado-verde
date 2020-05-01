@@ -5,7 +5,7 @@
 	"username": "postgres",
 	"password": "admin",
 	"database": "mercado_verde",
-	"entitites": [
+	"entities": [
 		"./src/models/*.ts"
 	],
 	"migrations": [
