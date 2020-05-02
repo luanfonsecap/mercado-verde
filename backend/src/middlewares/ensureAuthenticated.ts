@@ -24,7 +24,7 @@ export default function ensureAuthenticated(
 	const [, token] = authorization.split(' ');
 
 	if (!token) {
-		throw new AppError(401, 'Invalid token syntax.');
+		throw new AppError(400, 'Invalid token syntax.');
 	}
 
 	try {
