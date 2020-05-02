@@ -4,7 +4,7 @@ import { hash } from 'bcryptjs';
 import Client from '../models/Client';
 import AppError from '../errors/AppError';
 
-interface UserDTO {
+interface Request {
 	name: string;
 	email: string;
 	telephone: number;
@@ -27,7 +27,7 @@ class CreateClientService {
 		city,
 		uf,
 		password,
-	}: UserDTO): Promise<Client> {
+	}: Request): Promise<Client> {
 		const clientRepository = getRepository(Client);
 
 		const clientExist = await clientRepository.findOne({ where: { email } });
