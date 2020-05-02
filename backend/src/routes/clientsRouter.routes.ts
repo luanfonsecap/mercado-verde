@@ -28,4 +28,15 @@ clientsRouter.put('/', async (req: Request, res: Response) => {
 	return res.status(204).send();
 });
 
+clientsRouter.patch('/', async (req: Request, res: Response) => {
+	const { id } = req.user;
+	const { password, newPassword } = req.body;
+
+	const updateClientPasswordService = new UpdateClientPasswordService();
+
+	await updateClientPasswordService.execute({ id, password, newPassword });
+
+	return res.status(204).send();
+});
+
 export default clientsRouter;
