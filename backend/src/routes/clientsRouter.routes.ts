@@ -3,6 +3,7 @@ import { Router, Request, Response } from 'express';
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 import UpdateClientDataService from '../services/UpdateClientDataService';
 import UpdateClientPasswordService from '../services/UpdateClientPasswordService';
+import DeleteClientService from '../services/DeleteClientService';
 
 const clientsRouter = Router();
 
@@ -35,6 +36,16 @@ clientsRouter.patch('/', async (req: Request, res: Response) => {
 	const updateClientPasswordService = new UpdateClientPasswordService();
 
 	await updateClientPasswordService.execute({ id, password, newPassword });
+
+	return res.status(204).send();
+});
+
+clientsRouter.delete('/', async (req: Request, res: Response) => {
+	const { id } = req.user;
+
+	const deleteClientService = new DeleteClientService();
+
+	await deleteClientService.execute({ id });
 
 	return res.status(204).send();
 });
