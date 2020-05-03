@@ -1,9 +1,9 @@
 import { Router, Request, Response } from 'express';
 
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
-import UpdateClientDataService from '../services/UpdateClientDataService';
-import UpdateClientPasswordService from '../services/UpdateClientPasswordService';
-import DeleteClientService from '../services/DeleteClientService';
+import UpdateClientDataService from '../services/Client/UpdateClientDataService';
+import UpdateClientPasswordService from '../services/Client/UpdateClientPasswordService';
+import DeleteClientService from '../services/Client/DeleteClientService';
 
 const clientsRouter = Router();
 

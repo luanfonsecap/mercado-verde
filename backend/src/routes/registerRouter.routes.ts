@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 
-import CreateClientService from '../services/CreateClientService';
+import CreateClientService from '../services/Client/CreateClientService';
 import CreateProducerService from '../services/CreateProducerService';
 
 const registerRouter = Router();

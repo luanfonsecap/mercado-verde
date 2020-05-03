@@ -1,8 +1,8 @@
 import { getRepository } from 'typeorm';
 import { compare, hash } from 'bcryptjs';
 
-import Client from '../models/Client';
-import AppError from '../errors/AppError';
+import Client from '../../models/Client';
+import AppError from '../../errors/AppError';
 
 interface Request {
 	id: string;
