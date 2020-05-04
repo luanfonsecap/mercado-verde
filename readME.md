@@ -8,7 +8,7 @@ Mercado Verde é uma plataforma de marketplace de produtos orgânicos com o foco
 ## ⚗️ Tecnologias utilizadas
 	- Node.js
 	- Express
-	- Sequelize
+	- TypeORM
 	- Bcrypt
 
 ---
