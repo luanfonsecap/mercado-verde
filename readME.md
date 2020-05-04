@@ -10,4 +10,8 @@ Mercado Verde é uma plataforma de marketplace de produtos orgânicos com o foco
 	- Express
 	- Sequelize
 	- Bcrypt
-	-  
+
+---
+
+
+<p align="center">:construction: Projeto em desenvolvimento 👷️</p>
